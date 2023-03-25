@@ -39,7 +39,7 @@ export default function App() {
                     observacionAlumno="APRUEBA"
                     console.log("apruebaaa")
                   }
-                  else if(notaFinal >=2 && notaFinal<3){
+                  else if(notaFinal >=2.94 && notaFinal<3){
                     observacionAlumno="Habilita"
                     console.log("habilita")
 
@@ -84,7 +84,7 @@ export default function App() {
             } 
               }
               else{
-                alert("Ingrese la nota correcta")
+                alert("Ingrese la nota correcta - La nota debe ir entre 0 y 5")
               }
             
 
@@ -125,7 +125,10 @@ export default function App() {
             setNota3(search.nota3);
             setFinal(search.final);
             setObservacion(search.observacion);
+          }else{
+            alert("no se encuentra el alumno")
           }
+
           //console.log("buscandooo")
           //console.log(search)
           //console.log("definitiva es:" + al)
@@ -228,7 +231,7 @@ export default function App() {
           <TouchableOpacity 
           style={styles.boton}
           onPress={() => guardar("GUARDAR")}>
-            <Text style={styles.textoBotones} >CALCULAR/GUARDAR</Text>
+            <Text style={styles.textoBotones}>CALCULAR/GUARDAR</Text>
           </TouchableOpacity>
 
           <TouchableOpacity 
